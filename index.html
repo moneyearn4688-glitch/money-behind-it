@@ -1,169 +1,759 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Money Behind It — simple explanations about money, business, investing and the stories behind financial success.">
-<title>Money Behind It | Money • Business • Investing</title>
-<style>
-:root{--bg:#08111f;--card:#101d30;--text:#f5f7fb;--muted:#aebbd0;--accent:#25d366;--gold:#f4c95d}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#06101d,#0b1728 55%,#07101c);color:var(--text);line-height:1.6}
-a{text-decoration:none;color:inherit}
-.container{width:min(1100px,92%);margin:auto}
-nav{position:sticky;top:0;z-index:10;background:rgba(6,16,29,.92);backdrop-filter:blur(10px);border-bottom:1px solid #1c2b40}
-.navin{height:70px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:24px;font-weight:800;letter-spacing:.3px}.logo span{color:var(--gold)}
-nav .links{display:flex;gap:24px;color:var(--muted);font-size:14px}
-nav .links a:hover{color:white}
-.hero{padding:95px 0 80px;text-align:center}
-.badge{display:inline-block;border:1px solid #2a405c;background:#0d1b2d;color:var(--gold);padding:7px 13px;border-radius:999px;font-size:13px;margin-bottom:20px}
-h1{font-size:clamp(42px,7vw,76px);line-height:1.02;margin-bottom:20px}
-h1 span{color:var(--gold)}
-.hero p{max-width:700px;margin:0 auto 30px;color:var(--muted);font-size:18px}
-.btn{display:inline-block;padding:13px 22px;border-radius:10px;background:var(--gold);color:#111;font-weight:800;margin:5px}
-.btn.secondary{background:#17263b;color:white;border:1px solid #29405d}
-section{padding:72px 0}
-.section-title{text-align:center;font-size:34px;margin-bottom:12px}
-.section-sub{text-align:center;color:var(--muted);max-width:650px;margin:0 auto 35px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:linear-gradient(180deg,#112138,#0d192b);border:1px solid #20334d;border-radius:16px;padding:25px;transition:.2s}
-.card:hover{transform:translateY(-4px);border-color:#385777}
-.icon{font-size:30px;margin-bottom:12px}
-.card h3{margin-bottom:8px}.card p{color:var(--muted);font-size:15px}
-.video{background:#0d192b;border:1px solid #20334d;border-radius:18px;padding:30px;text-align:center}
-.video .thumb{height:230px;border-radius:12px;background:linear-gradient(135deg,#172b44,#263d59);display:flex;align-items:center;justify-content:center;font-size:55px;margin-bottom:20px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
-.aboutbox{background:#0d192b;border:1px solid #20334d;border-radius:18px;padding:30px}
-.about p{color:var(--muted);margin-top:12px}
-footer{border-top:1px solid #1c2b40;padding:35px 0;color:var(--muted);font-size:14px}
-.footerin{display:flex;justify-content:space-between;gap:20px}
-@media(max-width:750px){nav .links{display:none}.grid,.about{grid-template-columns:1fr}.hero{padding-top:70px}.footerin{flex-direction:column}section{padding:55px 0}}
-</style>
+  <meta charset="UTF-8">
+
+  <!-- Mobile & SEO -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Money Behind It — simple explanations about money, investing, business and the stories behind financial success.">
+  <meta name="keywords" content="money, investing, business, personal finance, financial education, wealth, Money Behind It">
+  <meta name="author" content="Money Behind It">
+
+  <meta property="og:title" content="Money Behind It | Money, Business & Investing">
+  <meta property="og:description" content="Understand money, investing and business through simple and interesting stories.">
+  <meta property="og:type" content="website">
+
+  <title>Money Behind It | Money • Investing • Business</title>
+
+  <style>
+    :root{
+      --bg:#070b14;
+      --card:#101827;
+      --card2:#0d1422;
+      --text:#f5f7fb;
+      --muted:#aebbd0;
+      --gold:#f4c95d;
+      --blue:#25d3ff;
+      --border:#24324a;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      background:linear-gradient(135deg,#060a12,#0b1728 55%,#07101c);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:min(1100px,92%);
+      margin:auto;
+    }
+
+    /* NAVIGATION */
+    nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(6,10,18,.95);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+
+    .navin{
+      min-height:70px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:800;
+      letter-spacing:.5px;
+      white-space:nowrap;
+    }
+
+    .logo span{
+      color:var(--gold);
+    }
+
+    .links{
+      display:flex;
+      gap:20px;
+      color:var(--muted);
+      font-size:14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .links a:hover{
+      color:white;
+    }
+
+    /* HERO */
+    .hero{
+      padding:90px 0 80px;
+      text-align:center;
+    }
+
+    .badge{
+      display:inline-block;
+      border:1px solid #2a405c;
+      background:#0d1b2d;
+      color:var(--gold);
+      padding:7px 13px;
+      border-radius:999px;
+      font-size:13px;
+      margin-bottom:20px;
+    }
+
+    h1{
+      font-size:clamp(42px,7vw,76px);
+      line-height:1.02;
+      margin-bottom:20px;
+    }
+
+    h1 span{
+      color:var(--gold);
+    }
+
+    .hero p{
+      max-width:720px;
+      margin:0 auto 30px;
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:13px 22px;
+      border-radius:10px;
+      background:var(--gold);
+      color:#111;
+      font-weight:800;
+      margin:5px;
+      transition:.2s;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn.secondary{
+      background:#17263b;
+      color:white;
+      border:1px solid #29405d;
+    }
+
+    /* SECTIONS */
+    section{
+      padding:72px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:34px;
+      margin-bottom:12px;
+    }
+
+    .section-sub{
+      text-align:center;
+      color:var(--muted);
+      max-width:650px;
+      margin:0 auto 35px;
+    }
+
+    /* CATEGORIES */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:linear-gradient(180deg,#111d30,#0d1524);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:28px;
+      transition:.2s;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      border-color:#385777;
+    }
+
+    .icon{
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .card h3{
+      margin-bottom:8px;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    /* VIDEOS */
+    .videos{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:25px;
+    }
+
+    .video-card{
+      background:#0d192b;
+      border:1px solid #20344d;
+      border-radius:18px;
+      padding:18px;
+      overflow:hidden;
+    }
+
+    .video-card iframe{
+      width:100%;
+      aspect-ratio:16/9;
+      border:0;
+      border-radius:12px;
+      display:block;
+      margin-bottom:18px;
+    }
+
+    .video-card h3{
+      margin-bottom:8px;
+    }
+
+    .video-card p{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* ABOUT */
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      align-items:stretch;
+    }
+
+    .aboutbox{
+      background:#0d192b;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:30px;
+    }
+
+    .aboutbox h3{
+      margin-bottom:12px;
+      color:var(--gold);
+    }
+
+    .aboutbox p{
+      color:var(--muted);
+      margin-bottom:12px;
+    }
+
+    /* CONTACT */
+    .contact{
+      max-width:800px;
+      margin:auto;
+      text-align:center;
+      background:#0d192b;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:40px 25px;
+    }
+
+    .contact p{
+      color:var(--muted);
+      margin:12px auto 20px;
+    }
+
+    /* LEGAL */
+    .legal{
+      background:#080e18;
+      border-top:1px solid var(--border);
+    }
+
+    .legalbox{
+      background:#0d192b;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:28px;
+      margin-bottom:20px;
+    }
+
+    .legalbox h3{
+      color:var(--gold);
+      margin-bottom:10px;
+    }
+
+    .legalbox p{
+      color:var(--muted);
+      font-size:14px;
+      margin-bottom:10px;
+    }
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid var(--border);
+      padding:35px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .footerin{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .footerlinks{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .footerlinks a:hover{
+      color:white;
+    }
+
+    /* MOBILE */
+    @media(max-width:750px){
+
+      .navin{
+        padding:15px 0;
+        flex-direction:column;
+      }
+
+      .links{
+        justify-content:center;
+        gap:12px;
+        font-size:13px;
+      }
+
+      .hero{
+        padding:65px 0 55px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      section{
+        padding:55px 0;
+      }
+
+      .grid,
+      .videos,
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      .section-title{
+        font-size:29px;
+      }
+
+      .card{
+        padding:23px;
+      }
+
+      .footerin{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
+      }
+    }
+  </style>
+
+  <!-- Google-friendly structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Money Behind It",
+    "description":"Simple explanations about money, investing and business.",
+    "url":"https://moneyearn4688-glitch.github.io/money-behind-it/",
+    "sameAs":[
+      "https://www.youtube.com/@MoneyBehindIt-q5p"
+    ]
+  }
+  </script>
 </head>
+
 <body>
+
+<!-- NAVIGATION -->
 <nav>
   <div class="container navin">
-    <a class="logo" href="#home">Money <span>Behind It</span></a>
+
+    <a href="#home" class="logo">
+      Money <span>Behind It</span>
+    </a>
+
     <div class="links">
-      <a href="#topics">Topics</a><a href="#videos">Videos</a><a href="#about">About</a><a href="#contact">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#privacy">Privacy</a>
     </div>
+
   </div>
 </nav>
 
-<main id="home">
-<section class="hero">
+
+<!-- HERO -->
+<section id="home" class="hero">
+
   <div class="container">
+
     <div class="badge">MONEY • BUSINESS • INVESTING</div>
-    <h1>Understand the <span>Money Behind It.</span></h1>
-    <p>Money Behind It explains the stories, strategies and ideas behind money, business, investing and financial success — in a simple way.</p>
-    <a class="btn" href="#videos">Watch Videos</a>
-    <a class="btn secondary" href="#about">Learn More</a>
+
+    <h1>
+      Understand the <span>Money Behind It.</span>
+    </h1>
+
+    <p>
+      We break down interesting money, business and investing stories
+      so you can understand what is really happening behind the headlines.
+    </p>
+
+    <a
+      class="btn"
+      href="https://www.youtube.com/@MoneyBehindIt-q5p"
+      target="_blank"
+      rel="noopener"
+    >
+      ▶ Visit Our YouTube
+    </a>
+
+    <a class="btn secondary" href="#categories">
+      Explore Topics
+    </a>
+
   </div>
+
 </section>
 
-<section id="topics">
-  <div class="container">
-    <h2 class="section-title">What We Cover</h2>
-    <p class="section-sub">Clear, easy-to-understand content for people who want to know what really happens behind the money.</p>
-    <div class="grid">
-      <div class="card"><div class="icon">💰</div><h3>Money</h3><p>Learn how money works, where it comes from and how financial systems shape everyday life.</p></div>
-      <div class="card"><div class="icon">📈</div><h3>Investing</h3><p>Explore investing concepts, market stories and long-term wealth-building ideas.</p></div>
-      <div class="card"><div class="icon">🏢</div><h3>Business</h3><p>Discover how companies make money, grow brands and build powerful business models.</p></div>
-    </div>
-  </div>
-</section>
 
-<section id="videos">
-<section id="videos">
+<!-- CATEGORIES -->
+<section id="categories">
+
   <div class="container">
-    <h2 class="section-title">Latest Videos</h2>
+
+    <h2 class="section-title">Explore Our Categories</h2>
+
     <p class="section-sub">
-      Watch the latest Money Behind It videos and discover the stories behind money, business and investing.
+      Learn the basics and discover the stories behind money,
+      investments and successful businesses.
     </p>
 
     <div class="grid">
-      
-      <div class="video">
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-bottom:20px;">
-          <iframe
-            src="https://www.youtube.com/embed/Io7oFRUVxS0"
-            title="Money Behind It - Video 1"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:12px;"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
 
-        <h3>Money Behind It — Latest Video</h3>
-        <p style="color:#aebbd0;margin:10px 0 20px;">
-          Watch the full video on Money Behind It.
+      <div class="card">
+        <div class="icon">💰</div>
+        <h3>Money</h3>
+        <p>
+          Learn about money, saving, wealth building,
+          personal finance and financial decisions.
         </p>
-
-        <a class="btn"
-           href="https://youtu.be/Io7oFRUVxS0"
-           target="_blank"
-           rel="noopener">
-          ▶ Watch on YouTube
-        </a>
       </div>
 
-      <div class="video">
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-bottom:20px;">
-          <iframe
-            src="https://www.youtube.com/embed/D62DYdw9qaY"
-            title="Money Behind It - Video 2"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:12px;"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Investing</h3>
+        <p>
+          Understand investing concepts, markets,
+          companies and long-term wealth creation.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💼</div>
+        <h3>Business</h3>
+        <p>
+          Discover how companies make money,
+          grow businesses and build powerful brands.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VIDEOS -->
+<section id="videos">
+
+  <div class="container">
+
+    <h2 class="section-title">Latest Videos</h2>
+
+    <p class="section-sub">
+      Watch Money Behind It on YouTube and learn something new.
+    </p>
+
+    <div class="videos">
+
+      <!-- VIDEO 1 -->
+      <div class="video-card">
+
+        <iframe
+          src="https://www.youtube.com/embed/Io7oFRUVxS0"
+          title="Money Behind It YouTube Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+
+        <h3>Money Behind It — Video 1</h3>
+
+        <p>
+          Watch the latest Money Behind It story and discover
+          what is happening behind the money.
+        </p>
+
+      </div>
+
+
+      <!-- VIDEO 2 -->
+      <div class="video-card">
+
+        <iframe
+          src="https://www.youtube.com/embed/D62DYdw9qaY"
+          title="Money Behind It YouTube Video 2"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
 
         <h3>Money Behind It — Video 2</h3>
-        <p style="color:#aebbd0;margin:10px 0 20px;">
-          Watch the full video on Money Behind It.
+
+        <p>
+          Another interesting money, business and investing story
+          from Money Behind It.
         </p>
 
-        <a class="btn"
-           href="https://youtu.be/D62DYdw9qaY"
-           target="_blank"
-           rel="noopener">
-          ▶ Watch on YouTube
-        </a>
       </div>
 
     </div>
+
+    <div style="text-align:center;margin-top:30px;">
+
+      <a
+        class="btn"
+        href="https://www.youtube.com/@MoneyBehindIt-q5p"
+        target="_blank"
+        rel="noopener"
+      >
+        🔴 Subscribe on YouTube
+      </a>
+
+    </div>
+
   </div>
+
 </section>
 
+
+<!-- ABOUT -->
 <section id="about">
-  <div class="container about">
-    <div>
-      <div class="badge">ABOUT THE CHANNEL</div>
-      <h2 class="section-title" style="text-align:left">Money Behind It</h2>
-      <p style="color:#aebbd0">We break down interesting money and business stories so you can understand the ideas behind the headlines — without complicated language.</p>
+
+  <div class="container">
+
+    <h2 class="section-title">About Money Behind It</h2>
+
+    <p class="section-sub">
+      Simple financial education without complicated language.
+    </p>
+
+    <div class="about">
+
+      <div class="aboutbox">
+
+        <h3>👤 Who We Are</h3>
+
+        <p>
+          Money Behind It is a financial education and storytelling
+          platform focused on money, investing and business.
+        </p>
+
+        <p>
+          Our goal is to explain interesting financial ideas and
+          business stories in a simple and easy-to-understand way.
+        </p>
+
+      </div>
+
+      <div class="aboutbox">
+
+        <h3>🎯 Our Mission</h3>
+
+        <p>
+          Our mission is to make financial and business knowledge
+          easier to understand for everyone.
+        </p>
+
+        <p>
+          We believe that understanding how money works can help
+          people make more informed financial decisions.
+        </p>
+
+      </div>
+
     </div>
-    <div class="aboutbox">
-      <h3>Our Goal</h3>
-      <p>Make financial and business knowledge easier to understand, one story at a time.</p>
-    </div>
+
   </div>
+
 </section>
 
+
+<!-- CONTACT -->
 <section id="contact">
-  <div class="container" style="text-align:center">
-    <h2 class="section-title">Stay Connected</h2>
-    <p class="section-sub">For collaborations, suggestions or questions, connect through your social channels.</p>
-    <a class="btn" href="https://www.youtube.com/@MoneyBehindIt-q5p" target="_blank" rel="noopener">YouTube</a>
-  </div>
-</section>
-</main>
 
-<footer>
-  <div class="container footerin">
-    <div>© 2026 Money Behind It. All rights reserved.</div>
-    <div>Educational content only. Not financial advice.</div>
+  <div class="container">
+
+    <div class="contact">
+
+      <h2 class="section-title">📩 Contact Us</h2>
+
+      <p>
+        Have a question, suggestion or business inquiry?
+        You can contact Money Behind It through our YouTube channel.
+      </p>
+
+      <a
+        class="btn"
+        href="https://www.youtube.com/@MoneyBehindIt-q5p"
+        target="_blank"
+        rel="noopener"
+      >
+        Contact / Visit YouTube
+      </a>
+
+    </div>
+
   </div>
+
+</section>
+
+
+<!-- PRIVACY & DISCLAIMER -->
+<section id="privacy" class="legal">
+
+  <div class="container">
+
+    <h2 class="section-title">Privacy Policy & Disclaimer</h2>
+
+    <div class="legalbox">
+
+      <h3>🔒 Privacy Policy</h3>
+
+      <p>
+        Money Behind It respects your privacy. This website is primarily
+        an informational website and does not intentionally collect
+        sensitive personal information from visitors.
+      </p>
+
+      <p>
+        We may use standard website technologies such as cookies,
+        analytics or third-party services in the future to understand
+        website traffic and improve the user experience.
+      </p>
+
+      <p>
+        Third-party websites and services linked from this website may
+        have their own privacy policies. Please review their policies
+        when using those services.
+      </p>
+
+    </div>
+
+
+    <div class="legalbox">
+
+      <h3>⚠️ Disclaimer</h3>
+
+      <p>
+        The information published by Money Behind It is provided for
+        educational and informational purposes only.
+      </p>
+
+      <p>
+        Nothing on this website or our YouTube channel should be
+        considered financial, investment, tax or legal advice.
+      </p>
+
+      <p>
+        Investing and financial markets involve risk. Always conduct
+        your own research and, when appropriate, consult a qualified
+        professional before making financial decisions.
+      </p>
+
+      <p>
+        Money Behind It does not guarantee any particular financial
+        result or investment return.
+      </p>
+
+    </div>
+
+
+    <div class="legalbox">
+
+      <h3>🔗 External Links</h3>
+
+      <p>
+        This website may contain links or embedded content from
+        third-party websites such as YouTube. Money Behind It is not
+        responsible for the content, policies or practices of external
+        websites.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="container footerin">
+
+    <div>
+      © 2026 Money Behind It. All rights reserved.
+    </div>
+
+    <div class="footerlinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#privacy">Privacy & Disclaimer</a>
+
+      <a
+        href="https://www.youtube.com/@MoneyBehindIt-q5p"
+        target="_blank"
+        rel="noopener"
+      >
+        YouTube
+      </a>
+    </div>
+
+  </div>
+
 </footer>
+
 </body>
 </html>
