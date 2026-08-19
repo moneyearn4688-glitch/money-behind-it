@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moneyearn4688-glitch.github.io/money-behind-it/sitemap.xml
